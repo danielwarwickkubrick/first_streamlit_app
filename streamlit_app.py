@@ -47,7 +47,7 @@ def get_fruit_load_list():
 
 def insert_row_snowflake(new_fruit):
   my_cur = my_cnx.cursor()
-  my_cur.execute("INSERT INTO FRUIT_LOAD_LIST VALUES ('from streamlit')")
+  my_cur.execute("INSERT INTO FRUIT_LOAD_LIST VALUES ('" + new_fruit + "')")
   return "Thanks for adding " + new_fruit
 
 if streamlit.button("Get Fruit Load List"):
